@@ -5,6 +5,7 @@ import servise.ProductsServise;
 import servise.UserServise;
 import servise.loader.LoaderModel;
 import servise.products.ProdModel;
+import servise.user.TypeOfUser;
 import servise.user.UserModel;
 
 import java.util.Scanner;
@@ -200,8 +201,8 @@ public class MenuController {
     private UserModel createNewUser() {
         int id;
         String login;
-        int password;
-        String typeOfUser;
+        String password;
+        TypeOfUser typeOfUser;
 
 
         System.out.print("Введите айди пользователя: ");
@@ -209,7 +210,7 @@ public class MenuController {
         System.out.print("Введите логин: ");
         login = sc.next();
         System.out.print("Введите пароль: ");
-        password = sc.nextInt();
+        password = sc.next();
         System.out.print("Введите тип пользователя : ");
         typeOfUser = sc.next();
 
