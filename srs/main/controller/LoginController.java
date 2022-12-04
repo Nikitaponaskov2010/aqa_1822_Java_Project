@@ -2,7 +2,7 @@ package controller;
 
 
 import servise.user.TypeOfUser;
-import servise.user.ValidationOfCredentials;
+import servise.ValidationOfCredentials;
 
 import java.util.Scanner;
 
@@ -32,7 +32,12 @@ public class LoginController {
         if (typeOfUser.equals(TypeOfUser.ADMINISTRATOR)) {
             return new AdminMenu();
         } else {
-            return new UserMenu();
+            return new UserMenu() {
+                @Override
+                public String[] getproductsAdminMenu() {
+                    return new String[0];
+                }
+            };
         }
     }
 }

@@ -5,14 +5,14 @@ public class LoaderModel {
     private String fio;
     private int age;
     private String adminName;
-    private String storekeeperName;
 
-    public LoaderModel(int id, String fio, int age, String adminName, String storekeeperName) {
+
+    public LoaderModel(int id, String fio, int age,  String adminName) {
         this.id = id;
         this.fio = fio;
         this.age = age;
         this.adminName = adminName;
-        this.storekeeperName = storekeeperName;
+
     }
 
     public int getId() {
@@ -31,7 +31,4 @@ public class LoaderModel {
         return adminName;
     }
 
-    public String getStorekeeperName() {
-        return storekeeperName;
-    }
 }

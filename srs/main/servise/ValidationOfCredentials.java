@@ -1,7 +1,9 @@
-package servise.user;
+package servise;
 
 import dao.DaoFail;
 import dao.UserFail;
+import servise.user.TypeOfUser;
+import servise.user.UserModel;
 
 import java.util.ArrayList;
 

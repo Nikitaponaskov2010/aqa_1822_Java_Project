@@ -3,13 +3,13 @@ package servise.products;
 public class ProdModel {
     private int id;
     private String productsName;
-    private int countOfLoader;
+    private int costProducts;
     private String storekeeperName;
 
-    public ProdModel(int id, String productsName, int countOfLoader, String storekeeperName) {
+    public ProdModel(int id, String productsName, int costProducts, String storekeeperName) {
         this.id = id;
         this.productsName = productsName;
-        this.countOfLoader = countOfLoader;
+        this.costProducts = costProducts;
         this.storekeeperName = storekeeperName;
     }
 
@@ -21,8 +21,8 @@ public class ProdModel {
         return productsName;
     }
 
-    public int getCountOfLoader() {
-        return countOfLoader;
+    public int getCostProducts() {
+        return costProducts;
     }
 
     public String getStorekeeperName() {

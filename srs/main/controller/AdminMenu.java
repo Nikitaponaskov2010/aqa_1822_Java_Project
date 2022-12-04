@@ -9,6 +9,14 @@ public class AdminMenu extends Menu {
             "4.Вернуться в меню",
             "5.Выйти из системы",
     };
+   private String [] productsAdminMenu={
+           "1. Добавить товар",
+           "2. Изменить товар",
+           "3. Удалить товар",
+           "4. Вернуться в меню"
+
+   };
+
 
     private String[] loaderAdminMenu = {
             "1.Посмотреть список категорий",
@@ -19,7 +27,7 @@ public class AdminMenu extends Menu {
     };
 
 
-    private String[] storekeeperAdminMenu= {
+    private String[] userAdminMenu= {
             "1.Добавить товар",
             "2.Изменить товара",
             "3.Удалить товар",
@@ -33,12 +41,16 @@ public class AdminMenu extends Menu {
         return adminMenu;
     }
 
+    public String[] getproductsAdminMenu() {
+        return productsAdminMenu;
+    }
+
     public String[] getLoaderAdminMenu() {
         return loaderAdminMenu;
     }
 
-    public String[] getStorekeeperAdminMenu() {
-        return storekeeperAdminMenu;
+    public String[] getUserAdminMenu() {
+        return userAdminMenu;
     }
 
 

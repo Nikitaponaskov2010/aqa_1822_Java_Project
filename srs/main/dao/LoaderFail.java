@@ -22,9 +22,7 @@ public class LoaderFail extends DaoFail {
                                 Integer.parseInt(tempArray[0]),
                                 tempArray[1],
                                 Integer.parseInt(tempArray[2]),
-                                tempArray[3],
-                                tempArray[4]
-                        )
+                                tempArray[3])
                 );
 
             }

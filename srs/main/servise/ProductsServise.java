@@ -25,7 +25,7 @@ public class ProductsServise {
     private ArrayList<String> convertProductsToString() {
         ArrayList<String> strings = new ArrayList<>();
         for (ProdModel model : products) {
-            strings.add(model.getId() + "," + model.getProductsName() + "," + model.getCountOfLoader() + "," + model.getStorekeeperName());
+            strings.add(model.getId() + "," + model.getProductsName() + "," + model.getCostProducts() + "," + model.getStorekeeperName());
         }
         return strings;
     }
