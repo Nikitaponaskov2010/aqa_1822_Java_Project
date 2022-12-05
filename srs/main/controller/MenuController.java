@@ -41,7 +41,6 @@ public class MenuController {
     }
 
 
-
     private void workWithAdminMenu() {
         showMenu(menu);
         switch (sc.nextInt()) {
@@ -54,13 +53,13 @@ public class MenuController {
                 break;
             }
             case 3: {
-               workWithuserAdminMenu();
+                workWithuserAdminMenu();
                 break;
             }
-            case 4:{
+            case 4: {
                 loginController.login();
             }
-            case 5:{
+            case 5: {
                 return;
             }
             default: {
@@ -69,6 +68,7 @@ public class MenuController {
             }
         }
     }
+
     private void showErrorMenuMessage() {
         System.out.println("Wrong menu point");
     }
@@ -121,7 +121,8 @@ public class MenuController {
     }
 
     private LoaderServise loaderServise = new LoaderServise();
-    private void   workWithloaderAdminMenu() {
+
+    private void workWithloaderAdminMenu() {
         showSubMenu(((AdminMenu) menu).getLoaderAdminMenu());
         switch (sc.nextInt()) {
             case 1: {
@@ -150,26 +151,26 @@ public class MenuController {
     }
 
 
-
     private LoaderModel createNewLoader() {
 
-             int id;
-             String fio;
-             int age;
-             String adminName;
+        int id;
+        String fio;
+        int age;
+        String adminName;
 
 
-            System.out.print("Введите айди грузчика: ");
-            id = sc.nextInt();
-            System.out.print("Введите фамилию имя отчество: ");
-            fio = sc.next();
-            System.out.print("Введите возраст грузчика: ");
-            age = sc.nextInt();
-            System.out.print("Введите имя администратора: ");
-            adminName = sc.next();
+        System.out.print("Введите айди грузчика: ");
+        id = sc.nextInt();
+        System.out.print("Введите фамилию имя отчество: ");
+        fio = sc.next();
+        System.out.print("Введите возраст грузчика: ");
+        age = sc.nextInt();
+        System.out.print("Введите имя администратора: ");
+        adminName = sc.next();
 
-            return new LoaderModel(id, fio, age, adminName);
-        }
+        return new LoaderModel(id, fio, age, adminName);
+    }
+
     private UserServise userServise = new UserServise();
 
     private void workWithuserAdminMenu() {
@@ -183,7 +184,7 @@ public class MenuController {
             }
 
             case 3: {
-               UserModel userModel = createNewUser();
+                UserModel userModel = createNewUser();
                 userServise.addNewUser(userModel);
                 workWithuserAdminMenu();
 
@@ -198,6 +199,7 @@ public class MenuController {
 
         }
     }
+
     private UserModel createNewUser() {
         int id;
         String login;
@@ -212,7 +214,11 @@ public class MenuController {
         System.out.print("Введите пароль: ");
         password = sc.next();
         System.out.print("Введите тип пользователя : ");
-        typeOfUser = sc.next();
+        String userType = sc.next();
+        typeOfUser =
+                userType.contains("admin") ? TypeOfUser.ADMINISTRATOR :
+                        userType.contains("store") ? TypeOfUser.STOREKEEPER :
+                                TypeOfUser.USER;
 
         return new UserModel(id, login, password, typeOfUser);
 
