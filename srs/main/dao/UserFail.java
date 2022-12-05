@@ -15,7 +15,7 @@ public class UserFail extends DaoFail{
         ArrayList<UserModel> userModels = new ArrayList<>();
         String line;
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\srs" + "\\main\\resources\\users.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\srs\\main\\resources\\users.txt"));
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tempArray = line.split(",");
 
@@ -36,7 +36,7 @@ public class UserFail extends DaoFail{
     private TypeOfUser getTypeOfUserByString(String typeOfUser) {
         TypeOfUser tempUserType;
 
-        if (typeOfUser.equals(TypeOfUser.ADMINISTRATOR.toString().toLowerCase())) {
+        if (typeOfUser.contains("администратор")) {
             tempUserType = TypeOfUser.ADMINISTRATOR;
         } else {
             tempUserType = TypeOfUser.STOREKEEPER;

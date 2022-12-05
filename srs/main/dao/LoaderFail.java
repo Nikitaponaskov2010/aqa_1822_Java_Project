@@ -14,7 +14,7 @@ public class LoaderFail extends DaoFail {
         List<LoaderModel> loader = new ArrayList<>();
         String line;
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\srs\\resources\\loader.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\srs\\main\\resources\\loader.txt"));
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tempArray = line.split(",");
 
