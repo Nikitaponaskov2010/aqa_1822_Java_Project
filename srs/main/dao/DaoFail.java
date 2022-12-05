@@ -15,7 +15,7 @@ public abstract class DaoFail {
     public boolean saveFile(List<String> file, String filename) {
         BufferedWriter bufferedWriter = null;
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\main\\resources\\" + filename +".txt"));
+            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\srs\\main\\resources\\" + filename +".txt"));
             for (String str1 : file
             ) {
                 bufferedWriter.write(str1);

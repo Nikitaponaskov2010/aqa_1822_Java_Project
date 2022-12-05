@@ -17,7 +17,7 @@ public class ProductsFail extends DaoFail {
         List<ProdModel> products = new ArrayList<>();
         String line;
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\main\\resources\\products.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\srs\\main\\resources\\products.txt"));
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tempArray = line.split(",");
 
