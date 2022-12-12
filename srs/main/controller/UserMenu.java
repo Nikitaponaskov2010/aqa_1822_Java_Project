@@ -19,6 +19,6 @@ public class UserMenu extends Menu {
 
     @Override
     public String[] getproductsAdminMenu() {
-        return new String[0];
+        return userMenu;
     }
 }

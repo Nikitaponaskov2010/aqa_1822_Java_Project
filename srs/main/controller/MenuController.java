@@ -174,7 +174,7 @@ public class MenuController {
     private UserServise userServise = new UserServise();
 
     private void workWithuserAdminMenu() {
-        showSubMenu(((AdminMenu) menu).getUserAdminMenu());
+        showSubMenu((menu).getMenu());
         switch (sc.nextInt()) {
             case 1: {
 

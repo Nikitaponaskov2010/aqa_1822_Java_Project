@@ -32,12 +32,7 @@ public class LoginController {
         if (typeOfUser.equals(TypeOfUser.ADMINISTRATOR)) {
             return new AdminMenu();
         } else {
-            return new UserMenu() {
-                @Override
-                public String[] getproductsAdminMenu() {
-                    return new String[0];
-                }
-            };
+            return new UserMenu();
+            }
         }
     }
-}
